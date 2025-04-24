@@ -85,6 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // Disable submit button and show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
             try {
                 const formData = {
                     name: document.getElementById('name').value.trim(),
@@ -92,11 +98,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     message: document.getElementById('message').value.trim()
                 };
 
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                    throw new Error('Please enter a valid email address');
+                }
+
                 if (!formData.name || !formData.email || !formData.message) {
                     throw new Error('Please fill in all fields');
                 }
 
-                const response = await fetch('//localhost:5000/api/contact', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -111,11 +123,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 const data = await response.json();
-                alert('Message sent successfully!');
+                
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'alert alert-success';
+                successMessage.textContent = 'Message sent successfully! I will get back to you soon.';
+                contactForm.insertBefore(successMessage, contactForm.firstChild);
+                
+                // Reset form
                 contactForm.reset();
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
             } catch (error) {
                 console.error('Error:', error);
-                alert('Error sending message. Please try again.');
+                
+                // Show error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'alert alert-error';
+                errorMessage.textContent = error.message || 'Error sending message. Please try again.';
+                contactForm.insertBefore(errorMessage, contactForm.firstChild);
+                
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 5000);
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
             }
         });
     }

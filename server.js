@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
+const nodemailer = require('nodemailer');
 
 dotenv.config();
 
@@ -16,6 +17,15 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.static(__dirname));
+
+// Email transporter configuration
+const transporter = nodemailer.createTransport({
+    service: 'outlook',
+    auth: {
+        user: 'asolajuma@outlook.com',
+        pass: process.env.EMAIL_PASSWORD // This should be set in your environment variables
+    }
+});
 
 // MongoDB connection with better error handling
 mongoose.connect('mongodb://127.0.0.1:27017/portfolio')
@@ -42,9 +52,27 @@ app.post('/api/contact', async (req, res) => {
             return res.status(400).json({ error: 'All fields are required' });
         }
 
+        // Save to database
         const contact = new Contact(req.body);
         await contact.save();
-        console.log('Message saved successfully:', contact);
+        
+        // Send email
+        const mailOptions = {
+            from: req.body.email,
+            to: 'asolajuma@outlook.com',
+            subject: `Portfolio Contact: ${req.body.name}`,
+            text: `Name: ${req.body.name}\nEmail: ${req.body.email}\n\nMessage:\n${req.body.message}`,
+            html: `
+                <h3>New Contact Form Submission</h3>
+                <p><strong>Name:</strong> ${req.body.name}</p>
+                <p><strong>Email:</strong> ${req.body.email}</p>
+                <p><strong>Message:</strong></p>
+                <p>${req.body.message}</p>
+            `
+        };
+
+        await transporter.sendMail(mailOptions);
+        console.log('Message saved and email sent successfully');
         res.status(201).json({ message: 'Message sent successfully' });
     } catch (error) {
         console.error('Error processing contact form:', error);
