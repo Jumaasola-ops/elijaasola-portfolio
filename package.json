@@ -17,6 +17,6 @@
     "express": "^4.21.2",
     "mongoose": "^8.2.2",
     "my-first-website": "file:",
-    "nodemailer": "^6.10.1"
+    "nodemailer": "^9.0.1"
   }
 }
