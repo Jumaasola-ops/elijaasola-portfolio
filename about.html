@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Elija Asola</title>
+    <meta name="description" content="About Elija Asola — software engineer and product builder in Kenya focused on reliable, scalable technology and real-world problem solving.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0b1020;
+            --bg-2: #111827;
+            --panel: rgba(17, 24, 39, 0.82);
+            --panel-soft: rgba(15, 23, 42, 0.7);
+            --card: #111827;
+            --card-2: #0f172a;
+            --line: rgba(148, 163, 184, 0.2);
+            --text: #e5e7eb;
+            --text-soft: #cbd5e1;
+            --muted: #94a3b8;
+            --accent: #facc15;
+            --accent-2: #f59e0b;
+            --white: #f8fafc;
+            --shadow: rgba(15, 23, 42, 0.42);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(250, 204, 21, 0.12), transparent 22%),
+                radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.1), transparent 30%),
+                linear-gradient(135deg, var(--bg) 0%, #0f172a 40%, #090d17 100%);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 2rem));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(10px);
+            background: rgba(11, 16, 32, 0.7);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 72px;
+            gap: 1rem;
+        }
+
+        .brand {
+            font-size: 1.05rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.25rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-soft);
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid rgba(250, 204, 21, 0.35);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: rgba(250, 204, 21, 0.04);
+        }
+
+        .page-shell {
+            padding: 5rem 0 5rem;
+        }
+
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            align-items: center;
+            padding: 2rem 0 1rem;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.42rem;
+            flex-wrap: wrap;
+            padding: 0.65rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(250, 204, 21, 0.08);
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            color: var(--accent);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .eyebrow .sep {
+            color: rgba(250, 204, 21, 0.7);
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            line-height: 0.98;
+            letter-spacing: -0.06em;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .lead {
+            max-width: 720px;
+            color: var(--text-soft);
+            font-size: 1.12rem;
+        }
+
+        .hero-card {
+            position: relative;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px var(--shadow);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            inset: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .card-body {
+            position: relative;
+            z-index: 1;
+            padding: 1.5rem;
+        }
+
+        .portrait-wrap {
+            width: 100%;
+            margin: 1rem 0 1.2rem;
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            background: rgba(15, 23, 42, 0.75);
+        }
+
+        .portrait {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(148, 163, 184, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            color: var(--white);
+            transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+            border-color: rgba(250, 204, 21, 0.35);
+            color: var(--accent);
+        }
+
+        .mini-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .status-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .summary-item {
+            padding: 1rem;
+            border-radius: 16px;
+            background: rgba(148, 163, 184, 0.04);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        .summary-item p {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .summary-item strong {
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .story-section,
+        .interest-section,
+        .values-section,
+        .cta-strip {
+            margin-top: 4rem;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            letter-spacing: -0.05em;
+            color: var(--white);
+        }
+
+        .section-head span {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .story-panel {
+            background: rgba(17, 24, 39, 0.68);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+        }
+
+        .story-panel p + p {
+            margin-top: 1rem;
+        }
+
+        .story-panel p {
+            color: var(--text-soft);
+            font-size: 1.02rem;
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+
+        .interest-card {
+            position: relative;
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.74));
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 1.4rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(250, 204, 21, 0.35);
+        }
+
+        .interest-card i {
+            font-size: 1.35rem;
+            color: var(--accent);
+            margin-bottom: 0.9rem;
+        }
+
+        .interest-card h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .interest-card p {
+            color: var(--text-soft);
+            font-size: 0.96rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .value-card {
+            padding: 1.3rem;
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            background: rgba(17, 24, 39, 0.7);
+        }
+
+        .value-card strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+            font-size: 1.05rem;
+        }
+
+        .value-card p {
+            color: var(--text-soft);
+            font-size: 0.96rem;
+        }
+
+        .cta-strip {
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(250, 204, 21, 0.2);
+            border-radius: 28px;
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.08), rgba(15, 23, 42, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-strip h3 {
+            color: var(--white);
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            letter-spacing: -0.05em;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0.9rem 1.4rem;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .button.primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #111827;
+            box-shadow: 0 12px 24px rgba(245, 158, 11, 0.22);
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: var(--white);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 900px) {
+            .about-hero,
+            .story-grid,
+            .interest-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero {
+                padding-top: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0.9rem 0;
+            }
+
+            .brand {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 0.8rem 1rem;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .page-shell {
+                padding-top: 3rem;
+            }
+
+            .eyebrow {
+                letter-spacing: 0.08em;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-strip {
+                align-items: flex-start;
+            }
+
+            .cta-actions {
+                width: 100%;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand"> <span></span></a>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="index.html#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="mailto:asolajuma@outlook.com"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+            <a href="mailto:asolajuma@outlook.com" class="nav-cta">Let’s talk</a>
+        </div>
+    </header>
+
+    <main class="page-shell container">
+        <section class="about-hero">
+            <div>
+                <div class="eyebrow">
+                    <span>Engineer</span>
+                    <span class="sep">•</span>
+                    <span>Builder</span>
+                    <span class="sep">•</span>
+                    <span>Consultant</span>
+                    <span class="sep">•</span>
+                    <span>Writer</span>
+                </div>
+
+                <h1>About me.</h1>
+                <p class="lead">
+                    I’m a software engineer and product builder in Kenya, driven by a curiosity for how technology works and, more importantly, how it can be used to solve real-world problems.
+                </p>
+            </div>
+
+            <aside class="hero-card" aria-label="Profile summary">
+                <div class="card-body">
+                    <div class="mini-label">
+                        <span class="status-dot"></span>
+                        Available for work
+                    </div>
+
+                    <div class="portrait-wrap">
+                        <img src="elija asola.jpg" alt="Elija Asola portrait" class="portrait">
+                    </div>
+
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <p>Focus</p>
+                            <strong>Systems</strong>
+                        </div>
+                        <div class="summary-item">
+                            <p>Specialty</p>
+                            <strong>Backend</strong>
+                        </div>
+                        <div class="summary-item">
+                            <p>Strength</p>
+                            <strong>Product</strong>
+                        </div>
+                        <div class="summary-item">
+                            <p>Base</p>
+                            <strong>Kenya</strong>
+                        </div>
+                    </div>
+
+                    <div class="social-links" aria-label="Social media links">
+                        <a href="mailto:asolajuma@outlook.com" aria-label="Email Elija Asola"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/Jumaasola-ops" target="_blank" rel="noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/elija-asola" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="story-section">
+            <div class="section-head">
+                <h2>My story</h2>
+                <span>How I got here</span>
+            </div>
+
+            <div class="story-grid">
+                <article class="story-panel">
+                    <p>
+                        My journey into technology started with simple HTML websites and a willingness to understand what was happening behind the screen. That curiosity grew into a deeper interest in software engineering, system architecture, cybersecurity, and the infrastructure that makes modern digital products possible.
+                    </p>
+                    <p>
+                        I quickly realized that software is not just about writing code — it is about understanding systems, trade-offs, reliability, and constraints. The more I learned, the more I appreciated the difference between a demo that looks impressive and a product that still works when users, data, and time pressure show up.
+                    </p>
+                </article>
+
+                <article class="story-panel">
+                    <p>
+                        Today, I work across the software development lifecycle, from designing system architectures and building APIs to developing web applications, automating workflows, and integrating intelligent technologies. I’m particularly interested in building systems that are scalable, maintainable, secure, and practical beyond the development environment.
+                    </p>
+                    <p>
+                        I care deeply about the connection between engineering quality and product value. I want the systems I build to not only function, but also to be trustworthy, understandable, and useful in real-world conditions.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="interest-section">
+            <div class="section-head">
+                <h2>Areas of interest</h2>
+                <span>What I work on</span>
+            </div>
+
+            <div class="interest-grid">
+                <article class="interest-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Software Engineering</h3>
+                    <p>Designing and building reliable applications, APIs, and backend systems that can stand up to real traffic and real usage.</p>
+                </article>
+
+                <article class="interest-card">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <h3>System Architecture</h3>
+                    <p>Developing modular, scalable systems that can evolve with requirements while keeping complexity manageable.</p>
+                </article>
+
+                <article class="interest-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Applying security principles throughout the design and development process to build safer, more resilient systems.</p>
+                </article>
+
+                <article class="interest-card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3>AI &amp; Automation</h3>
+                    <p>Using intelligent systems and automation to improve workflows, operations, and decision-making in meaningful ways.</p>
+                </article>
+
+                <article class="interest-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Web &amp; Product Development</h3>
+                    <p>Turning ideas into functional, intuitive products that solve meaningful problems with a strong user experience.</p>
+                </article>
+
+                <article class="interest-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Consulting &amp; Problem Solving</h3>
+                    <p>Helping teams and clients turn ideas into working products while balancing speed, clarity, and technical quality.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="section-head">
+                <h2>How I work</h2>
+                <span>Principles</span>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <strong>Practical thinking</strong>
+                    <p>I focus on what works in the real world, not just what looks impressive in a presentation.</p>
+                </div>
+
+                <div class="value-card">
+                    <strong>Engineering discipline</strong>
+                    <p>I care about reliability, maintainability, and system quality because software has to keep working after launch.</p>
+                </div>
+
+                <div class="value-card">
+                    <strong>Product sense</strong>
+                    <p>I think about who the product serves, why it matters, and whether it solves the right problem well.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-strip">
+            <h3>I build software that works in the real world.</h3>
+            <div class="cta-actions">
+                <a href="projects.html" class="button primary">View Projects</a>
+                <a href="mailto:asolajuma@outlook.com" class="button secondary">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Elija Asola. All rights reserved.<br><span>Written by me. Some Nescafe was involved.</span></p>
+            <div class="social-links">
+                <a href="mailto:asolajuma@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Jumaasola-ops" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/elija-asola" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

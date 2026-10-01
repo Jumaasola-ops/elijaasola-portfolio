@@ -80,7 +80,27 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-// Serve index.html
+// Serve primary pages
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'about.html'));
+});
+
+app.get('/about.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'about.html'));
+});
+
+app.get('/projects', (req, res) => {
+    res.sendFile(path.join(__dirname, 'projects.html'));
+});
+
+app.get('/projects.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'projects.html'));
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });

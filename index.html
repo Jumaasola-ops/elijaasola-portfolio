@@ -18,15 +18,14 @@
     <nav class="main-nav">
         <div class="nav-content">
             <div class="nav-logo">
-                <a href="#home">EA</a>
+                <a href="index.html"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="mailto:asolajuma@outlook.com"><i class="fa-solid fa-envelope"></i> Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
@@ -34,54 +33,60 @@
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="profile-container">
-                <div class="profile-pic">
-                    <img src="elija asola.jpg" alt="Elija Asola">
+    <section id="hero" class="hero">
+        <div class="hero-shell">
+            <div class="hero-copy">
+                <span class="eyebrow"><span>Engineer</span><span class="dot-separator">•</span><span>Builder</span><span class="dot-separator">•</span><span>Consultant</span><span class="dot-separator">•</span><span>Writer</span></span>
+                <h1>
+                    <span class="headline-prefix">I build software for real problems, real users, and real-world demands.</span>
+                    I'm Elija Asola
+                </h1>
+                <p class="value-prop">I’m a software engineer and product builder in Kenya. I design systems, products, and APIs, with a focus on building technology that is reliable, scalable, and built to solve real problems. I work across backend engineering, web development, AI, and product development, plus the occasional consulting call from someone who needs a miracle by Friday.</p>
+
+                <div class="cta-group" aria-label="Call to action">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                    <a href="mailto:asolajuma@outlook.com" class="btn btn-ghost">Contact Me</a>
                 </div>
-                <h1>Elija Asola</h1>
-                <p class="tagline">Crafting Code, Creating Futures</p>
-                <p class="quick-bio">Computer Science student passionate about cybersecurity, AI, and scalable web solutions.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn">View Projects</a>
-                    <a href="resume.pdf" class="btn" download>Download Resume</a>
-                    <a href="#contact" class="btn">Contact Me</a>
+            </div>
+
+            <div class="hero-visual" aria-label="Profile summary card">
+                <div class="profile-card">
+                    <div class="profile-badge">
+                        <span class="status-dot"></span>
+                        Available for work
+                    </div>
+
+                    <div class="profile-pic">
+                        <img src="elija asola.jpg" alt="Elija Asola portrait">
+                    </div>
+
+                    <div class="profile-meta">
+                        <div>
+                            <p>Role</p>
+                            <strong>Developer</strong>
+                        </div>
+                        <div>
+                            <p>Focus</p>
+                            <strong>Security</strong>
+                        </div>
+                        <div>
+                            <p>Based</p>
+                            <strong>Kenya</strong>
+                        </div>
+                    </div>
+
+                    <div class="skill-chips">
+                        <span>Cybersecurity</span>
+                        <span>AI</span>
+                        <span>Software Engineering</span>
+                        <span>Systems</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>I am a passionate and forward-thinking Computer Science student with a strong inclination toward technology's transformative power. My journey in tech began with experimenting on simple HTML websites—a hands-on curiosity that soon grew into a deep fascination with how digital systems operate, interact, and secure the data and experiences they support.</p>
-            
-            <p>Over the years, this passion has evolved into a solid foundation in software development, system architecture, and cybersecurity. I've explored front-end and back-end development, delved into network protocols, and designed secure systems that reflect a balance between usability and protection. I believe that in our ever-connected world, secure systems are no longer optional—they're essential.</p>
-
-            <div class="interests">
-                <h3>My interests span across:</h3>
-                <ul>
-                    <li><strong>Cybersecurity</strong> – from penetration testing to ethical hacking and digital forensics.</li>
-                    <li><strong>System Architecture</strong> – creating scalable, modular solutions for real-world problems.</li>
-                    <li><strong>AI & Automation</strong> – exploring how intelligent systems can optimize workflows and improve decision-making.</li>
-                    <li><strong>Web & App Development</strong> – building responsive, intuitive platforms with a focus on user experience.</li>
-                </ul>
-            </div>
-
-            <p>Every line of code I write and every system I design is rooted in a desire to make tech smarter, safer, and more inclusive. Whether I'm collaborating in a team or tackling solo projects, I bring a mindset that's curious, analytical, and purpose-driven.</p>
-
-            <div class="quote-block">
-                <p class="quote">"Secure systems, secure futures."</p>
-                <p class="quote-subtitle">This is not just a motto—it's a mission. A reminder that innovation must go hand-in-hand with responsibility.</p>
-            </div>
-
-            <div class="education-info">
-                <h3>Current Studies</h3>
-                <p>BSc in Computer Science</p>
-            </div>
-        </div>
-    </section>
 
     <section id="skills" class="section">
         <h2>Skills</h2>
@@ -128,278 +133,228 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <h2>Projects</h2>
-        
-        <!-- Advanced Projects -->
-        <div class="project-category">
-            <h3 class="category-title">Advanced Projects</h3>
-            <p class="category-description">Complex, full-stack applications showcasing expertise in AI, security, and system architecture.</p>
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
-                    <img src="images/facial-recognition.jpg" alt="Facial Recognition System">
-                    <h3>Facial Recognition Attendance</h3>
-                    <div class="project-content">
-                        <div class="project-overview">
-                            <p>Automated attendance tracking system using facial recognition and deep learning.</p>
-                            <p class="tech-stack">Python, TensorFlow, OpenCV, Flask</p>
-                        </div>
-                        <div class="project-details">
-                            <div class="case-study">
-                                <h4>Problem</h4>
-                                <p>Traditional attendance systems are time-consuming and prone to proxy attendance. Educational institutions needed a more efficient and secure solution.</p>
-                                
-                                <h4>Solution</h4>
-                                <p>Developed an AI-powered system using deep learning for real-time face detection and recognition, with a user-friendly web interface for administration.</p>
-                                
-                                <h4>Challenges</h4>
-                                <ul>
-                                    <li>Ensuring accurate recognition in varying lighting conditions</li>
-                                    <li>Optimizing model performance for real-time processing</li>
-                                    <li>Implementing secure data storage for facial data</li>
-                                </ul>
-                                
-                                <h4>Impact</h4>
-                                <ul>
-                                    <li>Reduced attendance marking time by 90%</li>
-                                    <li>Achieved 98.5% recognition accuracy</li>
-                                    <li>Successfully deployed in 2 university departments</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/facial-recognition" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Demo</a>
-                        <button class="btn-small view-case-study">View Details</button>
+        <div class="projects-grid projects-grid-home">
+            <article class="project-card" data-aos="fade-up">
+                <img src="images/eventast.png" alt="Eventast event booking platform">
+                <div class="project-card-body">
+                    <span class="project-badge">Event Booking</span>
+                    <h3>Eventast</h3>
+                    <p>Platform for event booking and fundraising with smooth user flows for discovery, reservation, and follow-up.</p>
+                    <ul class="project-points">
+                        <li>Booking and event management workflow</li>
+                        <li>Fundraising campaign support</li>
+                        <li>Responsive web experience for users and admins</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
                     </div>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/marketplace.jpg" alt="Multi-vendor Marketplace">
-                    <h3>Multi-vendor Marketplace</h3>
-                    <div class="project-content">
-                        <div class="project-overview">
-                            <p>Full-featured marketplace platform with payment integration and real-time updates.</p>
-                            <p class="tech-stack">MERN Stack, Stripe API, AWS</p>
-                        </div>
-                        <div class="project-details">
-                            <div class="case-study">
-                                <h4>Problem</h4>
-                                <p>Small businesses needed an accessible platform to sell products online without significant technical overhead.</p>
-                                
-                                <h4>Solution</h4>
-                                <p>Built a scalable marketplace platform with automated payment processing, inventory management, and real-time order tracking.</p>
-                                
-                                <h4>Challenges</h4>
-                                <ul>
-                                    <li>Implementing secure payment processing</li>
-                                    <li>Managing real-time inventory across multiple vendors</li>
-                                    <li>Optimizing image storage and delivery</li>
-                                </ul>
-                                
-                                <h4>Impact</h4>
-                                <ul>
-                                    <li>Onboarded 50+ vendors in first month</li>
-                                    <li>Processed 1000+ transactions</li>
-                                    <li>Achieved 99.9% uptime</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/marketplace" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Live Demo</a>
-                        <button class="btn-small view-case-study">View Details</button>
-                    </div>
+                <div class="project-links">
+                    <a href="projects.html" class="btn-small">View project</a>
                 </div>
+            </article>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/blockchain.jpg" alt="Blockchain Voting">
-                    <h3>Blockchain Voting System</h3>
-                    <p>Secure and transparent voting system built on blockchain technology.</p>
-                    <p class="tech-stack">Solidity, Web3.js, React, Node.js</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/blockchain-voting" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Demo</a>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/mildanscrm.png" alt="MildanSCRM dashboard">
+                <div class="project-card-body">
+                    <span class="project-badge">CRM Dashboard</span>
+                    <h3>MildanSCRM</h3>
+                    <p>Customer relationship dashboard designed for managing leads, client activity, and business operations in one place.</p>
+                    <ul class="project-points">
+                        <li>Pipeline and customer tracking</li>
+                        <li>Reporting and analytics views</li>
+                        <li>Operational workflows for sales teams</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>Dashboard</span>
+                        <span>UX</span>
+                        <span>Admin Tools</span>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="project-links">
+                    <a href="projects.html" class="btn-small">View project</a>
+                </div>
+            </article>
 
-        <!-- Intermediate Projects -->
-        <div class="project-category">
-            <h3 class="category-title">Intermediate Projects</h3>
-            <p class="category-description">Applications demonstrating proficiency in APIs, databases, and real-time features.</p>
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
-                    <img src="images/chat-app.jpg" alt="Real-time Chat">
-                    <h3>Real-time Chat Application</h3>
-                    <p>Feature-rich chat platform with real-time messaging and user presence.</p>
-                    <p class="tech-stack">Node.js, Socket.io, React, MongoDB</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/chat-app" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Live Demo</a>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/primeinsurance.png" alt="PrimeInsurance insurance system">
+                <div class="project-card-body">
+                    <span class="project-badge">Insurance System</span>
+                    <h3>PrimeInsurance</h3>
+                    <p>Insurance platform handling policy management, cover creation, claims flows, and core operational activities.</p>
+                    <ul class="project-points">
+                        <li>Policy and cover generation</li>
+                        <li>Claims and customer lifecycle tracking</li>
+                        <li>Business process support for the insurance team</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>Insurance</span>
+                        <span>Workflow</span>
+                        <span>Web App</span>
                     </div>
                 </div>
+                <div class="project-links">
+                    <a href="projects.html" class="btn-small">View project</a>
+                </div>
+            </article>
 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/weather-app.jpg" alt="Weather App">
-                    <h3>Weather Dashboard</h3>
-                    <p>Dynamic weather application with location tracking and forecast visualization.</p>
-                    <p class="tech-stack">JavaScript, OpenWeather API, Chart.js</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/weather-app" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Live Demo</a>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/raffstamu.png" alt="Raffstamu interior design website">
+                <div class="project-card-body">
+                    <span class="project-badge">Interior Design</span>
+                    <h3>Raffstamu</h3>
+                    <p>Brand-focused website for interior design services, combining visual storytelling with conversion-friendly service pages.</p>
+                    <ul class="project-points">
+                        <li>Portfolio and service presentation</li>
+                        <li>Design-led marketing experience</li>
+                        <li>Responsive layout for client discovery</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>Web Design</span>
+                        <span>Brand</span>
+                        <span>UI/UX</span>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="project-links">
+                    <a href="projects.html" class="btn-small">View project</a>
+                </div>
+            </article>
 
-        <!-- Beginner Projects -->
-        <div class="project-category">
-            <h3 class="category-title">Beginner Projects</h3>
-            <p class="category-description">Foundational projects showcasing core programming concepts.</p>
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
-                    <img src="images/library.jpg" alt="Library Management">
-                    <h3>Library Management System</h3>
-                    <p>Digital library system implementing fundamental data structures and algorithms.</p>
-                    <p class="tech-stack">Python, SQLite, Tkinter</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/library-system" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Demo</a>
+            <article class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/santsamsds.png" alt="Santasamsds driving school and car hiring website">
+                <div class="project-card-body">
+                    <span class="project-badge">Driving School</span>
+                    <h3>Santasamsds</h3>
+                    <p>Multi-service website for driver training and car hire business operations, including an admin management layer.</p>
+                    <ul class="project-points">
+                        <li>Driving school service pages</li>
+                        <li>Car hiring and booking flows</li>
+                        <li>Admin panel for operational control</li>
+                    </ul>
+                    <div class="project-meta">
+                        <span>Admin</span>
+                        <span>Booking</span>
+                        <span>Business App</span>
                     </div>
                 </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/todo.jpg" alt="Todo App">
-                    <h3>Task Manager</h3>
-                    <p>Clean and intuitive todo application with local storage and priority sorting.</p>
-                    <p class="tech-stack">HTML, CSS, JavaScript</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Jumaasola-ops/task-manager" class="btn-small">GitHub</a>
-                        <a href="#" class="btn-small">Live Demo</a>
-                    </div>
+                <div class="project-links">
+                    <a href="projects.html" class="btn-small">View project</a>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
     <section id="education" class="section">
-        <h2>Education</h2>
-        <div class="education-timeline">
-            <div class="timeline-item" data-aos="fade-right">
-                <h3>Egerton University</h3>
-                <p>BSc. in Computer Science, 2020–2024 (Expected)</p>
+        <h2>Professional Certifications</h2>
+        <div class="certifications-grid">
+            <article class="cert-card" data-aos="fade-up">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <p class="cert-label">Programming</p>
+                        <h3>Computer Science</h3>
+                    </div>
+                </div>
                 <ul>
-                    <li>Relevant Coursework: Algorithms, OS, Software Engineering, AI</li>
-                    <li>Dean's List 2023</li>
+                    <li>CS50x – Introduction to Computer Science</li>
+                    <li>Google IT Automation with Python</li>
+                    <li>JavaScript, HTML & CSS Foundations</li>
+                    <li>Google IT Support</li>
                 </ul>
-            </div>
-            <div class="certifications">
-                <h3>Professional Certifications</h3>
-                
-                <div class="cert-category">
-                    <div class="cert-header">
-                        <img src="images/harvard-edx.svg" alt="Harvard edX" class="cert-logo">
-                        <h4>🔧 General Programming & Computer Science</h4>
-                    </div>
-                    <ul>
-                        <li>CS50x – Introduction to Computer Science (Harvard, edX)</li>
-                        <li>Google IT Automation with Python (Coursera)</li>
-                        <li>Programming Foundations with JavaScript, HTML and CSS (Duke University)</li>
-                        <li>Google IT Support (Coursera)</li>
-                    </ul>
-                </div>
+            </article>
 
-                <div class="cert-category">
-                    <div class="cert-header">
-                        <img src="images/meta-logo.svg" alt="Meta" class="cert-logo">
-                        <h4>🌐 Web Development</h4>
+            <article class="cert-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-globe"></i></div>
+                    <div>
+                        <p class="cert-label">Development</p>
+                        <h3>Web Engineering</h3>
                     </div>
-                    <ul>
-                        <li>Meta Front-End Developer Certificate (Coursera)</li>
-                        <li>freeCodeCamp Certifications:
-                            <ul class="sub-certs">
-                                <li>Responsive Web Design</li>
-                                <li>JavaScript Algorithms and Data Structures</li>
-                                <li>Front-End Libraries</li>
-                                <li>APIs and Microservices</li>
-                                <li>Full Stack Certification</li>
-                            </ul>
-                        </li>
-                        <li>The Odin Project (Full Curriculum Completed)</li>
-                    </ul>
                 </div>
+                <ul>
+                    <li>Meta Front-End Developer Certificate</li>
+                    <li>Responsive Web Design</li>
+                    <li>JavaScript Algorithms & Data Structures</li>
+                    <li>APIs & Microservices</li>
+                    <li>The Odin Project</li>
+                </ul>
+            </article>
 
-                <div class="cert-category">
-                    <div class="cert-header">
-                        <img src="images/aws-logo.svg" alt="AWS" class="cert-logo">
-                        <h4>☁️ Cloud & DevOps</h4>
+            <article class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <div>
+                        <p class="cert-label">Infrastructure</p>
+                        <h3>Cloud & DevOps</h3>
                     </div>
-                    <ul>
-                        <li>AWS Certified Cloud Practitioner</li>
-                        <li>Google Cloud Digital Leader</li>
-                        <li>Docker Essentials (Udemy/Pluralsight)</li>
-                    </ul>
                 </div>
+                <ul>
+                    <li>AWS Certified Cloud Practitioner</li>
+                    <li>Google Cloud Digital Leader</li>
+                    <li>Docker Essentials</li>
+                </ul>
+            </article>
 
-                <div class="cert-category">
-                    <div class="cert-header">
-                        <img src="images/ibm-logo.svg" alt="IBM" class="cert-logo">
-                        <h4>🤖 AI, ML, and Data Science</h4>
+            <article class="cert-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <p class="cert-label">AI</p>
+                        <h3>Data & Intelligence</h3>
                     </div>
-                    <ul>
-                        <li>AI For Everyone – Andrew Ng (Coursera)</li>
-                        <li>Machine Learning – Andrew Ng (Stanford)</li>
-                        <li>IBM Data Science Professional Certificate</li>
-                        <li>Google Machine Learning Crash Course</li>
-                    </ul>
                 </div>
+                <ul>
+                    <li>AI For Everyone</li>
+                    <li>Machine Learning</li>
+                    <li>IBM Data Science Certificate</li>
+                    <li>Google ML Crash Course</li>
+                </ul>
+            </article>
 
-                <div class="cert-category">
-                    <div class="cert-header">
-                        <img src="images/comptia-logo.svg" alt="CompTIA" class="cert-logo">
-                        <h4>🔐 Cybersecurity</h4>
+            <article class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <p class="cert-label">Security</p>
+                        <h3>Cybersecurity</h3>
                     </div>
-                    <ul>
-                        <li>Google Cybersecurity Professional Certificate</li>
-                        <li>CompTIA Security+ (SY0-601)</li>
-                        <li>IBM Cybersecurity Analyst</li>
-                        <li>TryHackMe Certificates (Various paths)</li>
-                    </ul>
                 </div>
+                <ul>
+                    <li>Google Cybersecurity Certificate</li>
+                    <li>CompTIA Security+</li>
+                    <li>IBM Cybersecurity Analyst</li>
+                    <li>TryHackMe learning paths</li>
+                </ul>
+            </article>
 
-                <div class="cert-category">
-                    <h4>💼 Career Skills & Git</h4>
-                    <ul>
-                        <li>GitHub Learning Lab – Git & GitHub</li>
-                        <li>LinkedIn Learning – Tech Career Paths</li>
-                    </ul>
+            <article class="cert-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="cert-header">
+                    <div class="cert-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div>
+                        <p class="cert-label">Career</p>
+                        <h3>Skills & Git</h3>
+                    </div>
                 </div>
-            </div>
+                <ul>
+                    <li>GitHub Learning Lab</li>
+                    <li>LinkedIn Learning Paths</li>
+                    <li>Product & workflow fundamentals</li>
+                </ul>
+            </article>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-            <form id="contact-form" method="POST">
-                <input type="text" name="name" id="name" placeholder="Name" required>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <textarea name="message" id="message" placeholder="Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Elija Asola. All rights reserved.<br><span>Written by me. Some Nescafe was involved.</span></p>
             <div class="social-links">
-                <a href="mailto:asolajuma@outlook.com">Email</a>
-                <a href="https://github.com">GitHub</a>
-                <a href="https://linkedin.com">LinkedIn</a>
+                <a href="mailto:asolajuma@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Jumaasola-ops" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/elija-asola" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Elija Asola. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

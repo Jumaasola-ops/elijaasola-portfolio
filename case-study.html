@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | Elija Asola</title>
+    <meta name="description" content="Detailed case study for a selected project.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="case-study-page">
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <a href="index.html">EA</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="mailto:asolajuma@outlook.com"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="case-study-shell">
+        <section class="case-study-header">
+            <div class="case-study-intro">
+                <span id="caseTag" class="eyebrow">Project</span>
+                <h1 id="caseTitle">Case study</h1>
+                <p id="caseSummary">Loading project details...</p>
+            </div>
+            <div class="case-study-actions">
+                <a id="backBtn" href="projects.html" class="btn btn-secondary">Back to projects</a>
+                <button id="downloadBtn" class="btn btn-primary" type="button">Download case study</button>
+            </div>
+        </section>
+
+        <section class="case-study-grid">
+            <article class="case-card">
+                <h2>Problem</h2>
+                <p id="caseProblem"></p>
+            </article>
+
+            <article class="case-card">
+                <h2>Solution</h2>
+                <p id="caseSolution"></p>
+            </article>
+
+            <article class="case-card">
+                <h2>Business impact</h2>
+                <ul id="caseImpact"></ul>
+            </article>
+
+            <article class="case-card">
+                <h2>Tech stack</h2>
+                <div id="caseStack" class="tag-list"></div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Elija Asola. All rights reserved.<br><span>Written by me. Some Nescafe was involved.</span></p>
+            <div class="social-links">
+                <a href="mailto:asolajuma@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Jumaasola-ops" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/elija-asola" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const projectData = {
+            eventast: {
+                tag: 'Event Booking',
+                title: 'Eventast',
+                summary: 'A platform that brings together booking, event discovery, and fundraising workflows in one simple user journey.',
+                problem: 'Organizers and attendees needed a smoother way to discover, book, and support events without juggling disconnected tools and manual follow-ups.',
+                solution: 'I designed and built a digital event flow covering registration, booking, fundraising activation, and responsive user journeys for both organizers and attendees.',
+                impact: [
+                    'Reduced event booking friction through a simpler user-friendly flow.',
+                    'Created a more structured fundraising flow for event supporters and organizers.',
+                    'Delivered a responsive experience across mobile and desktop screens.'
+                ],
+                stack: ['Next.js', 'Node.js', 'Redis', 'REST API', 'Docker', 'PostgreSQL']
+            },
+            mildanscrm: {
+                tag: 'CRM Dashboard',
+                title: 'MildanSCRM',
+                summary: 'A CRM dashboard for tracking leads, customer activity, and internal operations through a single source of visibility.',
+                problem: 'Businesses were struggling with fragmented customer information and limited visibility into pipeline activity, making decision-making slower and less precise.',
+                solution: 'I built a clean dashboard that centralizes customer data, operational reporting, and lead-tracking workflows into a readable overview for teams and managers.',
+                impact: [
+                    'Improved visibility across customer lifecycle stages.',
+                    'Made reporting and operational monitoring easier for teams.',
+                    'Created a scalable dashboard foundation for future workflow expansion.'
+                ],
+                stack: ['Dashboard', 'UX', 'Analytics', 'Admin tools', 'Business workflow']
+            },
+            primeinsurance: {
+                tag: 'Insurance System',
+                title: 'PrimeInsurance',
+                summary: 'An insurance operations system designed to support policy generation, customer workflows, and everyday business processes.',
+                problem: 'Insurance operations often depend on a mix of manual steps, limited visibility, and disjointed processes that slow cover generation and service delivery.',
+                solution: 'I designed a workflow-focused platform that supports cover generation, policy management, claims handling, and customer process tracking in a structured system.',
+                impact: [
+                    'Streamlined core insurance operations around cover and policy generation.',
+                    'Improved customer workflow visibility for internal teams.',
+                    'Built a foundation for larger operational automation in the future.'
+                ],
+                stack: ['Next.js', 'FastAPI', 'PostgreSQL', 'Docker', 'Redis']
+            },
+            raffstamu: {
+                tag: 'Interior Design',
+                title: 'Raffstamu',
+                summary: 'A design-focused website that presents a premium interior brand with a strong visual narrative and service-led layout.',
+                problem: 'Interior design businesses often need stronger visual storytelling and clearer service positioning online to attract quality leads.',
+                solution: 'I developed a brand-led website with polished sections for portfolio, service communication, and conversion-focused visual presentation tailored to the target audience.',
+                impact: [
+                    'Improved presentation of services and portfolio work.',
+                    'Created a mobile-friendly experience aligned to conversion goals.',
+                    'Elevated brand perception through stronger visual storytelling.'
+                ],
+                stack: ['Angular', 'Node.js']
+            },
+            santasamsds: {
+                tag: 'Driving School',
+                title: 'Santasamsds',
+                summary: 'A multi-service business website for a driving school and car hire brand, combining public-facing pages with admin controls.',
+                problem: 'A business with multiple service lines needed a clearer digital presence and a more structured way to support bookings and internal operations.',
+                solution: 'I built a website that supports both public-facing service information and operational admin requirements for managing bookings and business workflows.',
+                impact: [
+                    'Unified service and booking information in a single digital experience.',
+                    'Added admin-friendly workflows for operational control.',
+                    'Improved usability across mobile and desktop devices.'
+                ],
+                stack: ['HTML', 'Tailwind CSS', 'JavaScript', 'Spring Boot']
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const projectKey = params.get('project') || 'eventast';
+        const project = projectData[projectKey] || projectData.eventast;
+
+        document.getElementById('caseTag').textContent = project.tag;
+        document.getElementById('caseTitle').textContent = project.title;
+        document.getElementById('caseSummary').textContent = project.summary;
+        document.getElementById('caseProblem').textContent = project.problem;
+        document.getElementById('caseSolution').textContent = project.solution;
+
+        const impactList = document.getElementById('caseImpact');
+        project.impact.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            impactList.appendChild(li);
+        });
+
+        const stackWrap = document.getElementById('caseStack');
+        project.stack.forEach(tag => {
+            const span = document.createElement('span');
+            span.className = 'case-tag';
+            span.textContent = tag;
+            stackWrap.appendChild(span);
+        });
+
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.addEventListener('click', () => {
+            const text = [
+                `Project: ${project.title}`,
+                `Category: ${project.tag}`,
+                '',
+                'Summary',
+                project.summary,
+                '',
+                'Problem',
+                project.problem,
+                '',
+                'Solution',
+                project.solution,
+                '',
+                'Business impact',
+                ...project.impact.map((item, index) => `${index + 1}. ${item}`),
+                '',
+                'Tech stack',
+                ...project.stack
+            ].join('\n');
+
+            const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${projectKey}-case-study.txt`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        });
+
+        if (params.get('download') === '1') {
+            downloadBtn.click();
+        }
+    </script>
+</body>
+</html>
